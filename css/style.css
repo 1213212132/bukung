@@ -1,6 +1,7 @@
 .wrap {
     font-family: 'Pretendard-Regular';
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .header .top_bar {
@@ -29,21 +30,24 @@
     align-items: center;
     justify-content: space-between;
     height: 109rem;
+
 }
 
 .header .logo {
+    display: block;
     position: absolute;
-
+    background: #06307a;
     left: 0;
+    height: 100rem;
+    width: 400rem;
+
 }
 
 
 .header .logo a {
-    display: block;
-    height: 100rem;
-    width: 400rem;
-    text-indent: -9999rem;
-    background: #0f296f url(/images/gnb_logo.png)no-repeat 45% center;
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
 }
 
 .gnb {
@@ -231,19 +235,7 @@
     transition: 3s;
 }
 
-@media (max-width : 768px) {
-    body {
 
-        overflow: hidden;
-    }
-
-    .wrap {
-        overflow: hidden;
-    }
-
-
-
-}
 
 
 /*세션02시작*/
@@ -446,6 +438,10 @@
 
 /*section3 tap*/
 
+.section03 {
+
+    padding-bottom: 50rem;
+}
 
 .tap_menu .tap_on .bottom {
     height: 0;
@@ -565,3 +561,73 @@
 /* * {
     outline: 1rem solid tomato;
 } */
+
+
+
+/*sec04*/
+
+.section04 {
+    position: relative;
+}
+
+.section04 .back_img {
+    background: url(../images/main_board_back_5.png)no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.section04 .back_img .title {
+    padding-top: 50rem;
+}
+
+.section04 .back_img .title p {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.section04 .back_img .title h3 {
+
+    font-size: 38px;
+    color: #000000;
+}
+
+.section04 .bottom_tap .bottom {
+    height: 0;
+    overflow: hidden;
+}
+
+.section04 .bottom_tap .bottom.on {
+    height: auto;
+}
+
+
+.news_tap span {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    font-size: 18px;
+    color: #000000;
+    cursor: pointer;
+}
+
+
+.news_tap .top.on span {
+    /*color:#40060b; #1f3576;가을*/
+    color: #000;
+    font-weight: 700;
+}
+
+.news_tap .top.on span:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 16px;
+    position: absolute;
+    left: 200rem;
+    top: 50%;
+    margin-top: -8px;
+    background: url('../images/main_gallery_arrow.png')no-repeat right center;
+}

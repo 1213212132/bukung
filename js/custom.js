@@ -85,6 +85,15 @@ $(function () {
     });
 
 
+
+    $('.top_tap .top').on('click', function (e) {
+        e.preventDefault();
+        let idx = $(this).index();
+        $('.bottom_tap .bottom').eq(idx).addClass('on').siblings().removeClass('on');
+        $(this).addClass('on').siblings().removeClass('on');
+    });
+
+
     $('.sec3_slide01').slick({
         loop: true,
         slidesToShow: 1,
